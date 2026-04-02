@@ -1,0 +1,284 @@
+:root {
+  /* Page backgrounds */
+  --pm-gradient-start: #FBFCFE;
+  --pm-gradient-mid: #E6EAF4;
+  --pm-gradient-end: #D7DEEE;
+  --pm-content-bg: #F3F4F6;
+  --pm-card-bg: #FFFFFF;
+  --pm-card-bg-hover: #F9FAFB;
+
+  /* Text colors */
+  --pm-text-primary: #1F2937;
+  --pm-text-secondary: #8B7340;
+  --pm-text-muted: #9CA3AF;
+  --pm-text-grey: #6B7280;
+  --pm-text-on-accent: #FFFFFF;
+
+  /* Accent colors */
+  --pm-accent-primary: #9E8544;
+  --pm-accent-primary-hover: #8B7339;
+  --pm-accent-primary-bg: rgba(158, 133, 68, 0.08);
+  --pm-accent-green: #10B981;
+  --pm-accent-green-bg: rgba(16, 185, 129, 0.1);
+  --pm-accent-red: #EF4444;
+  --pm-accent-red-bg: rgba(239, 68, 68, 0.08);
+  --pm-accent-orange: #F59E0B;
+  --pm-accent-orange-bg: rgba(245, 158, 11, 0.1);
+  --pm-accent-purple: #8B5CF6;
+  --pm-accent-purple-bg: rgba(139, 92, 246, 0.08);
+  --pm-accent-gold: #C4A767;
+  --pm-accent-gold-bg: rgba(196, 167, 103, 0.1);
+
+  /* Sidebar */
+  --pm-sidebar-bg: #FFFFFF;
+  --pm-sidebar-border: #E2E8F0;
+  --pm-sidebar-item-color: #4A4880;
+  --pm-sidebar-item-hover-bg: #F1F5F9;
+  --pm-sidebar-item-hover-color: #2D2B6B;
+  --pm-sidebar-item-active-bg: #E8F4FD;
+  --pm-sidebar-item-active-color: #05014A;
+  --pm-sidebar-item-active-shadow: 0 1px 6px rgba(5, 1, 74, 0.10);
+  --pm-sidebar-item-active-border: #05014A;
+  --pm-sidebar-item-active-icon-filter: none;
+  --pm-sidebar-icon-filter: none;
+  --pm-sidebar-icon-opacity: 0.7;
+  --pm-sidebar-icon-active-opacity: 1;
+
+  /* Chart */
+  --pm-bar-light: #E5E7EB;
+  --pm-bar-active: #9E8544;
+  --pm-tooltip-bg: #F9FAFB;
+
+  /* Trend badges */
+  --pm-trend-green-bg: rgba(16, 185, 129, 0.1);
+  --pm-trend-red-bg: rgba(239, 68, 68, 0.1);
+
+  /* Borders */
+  --pm-border: #DCE0E5;
+  --pm-border-light: #E5E7EB;
+  --pm-border-heavy: #D1D5DB;
+
+  /* Inputs / Forms */
+  --pm-input-bg: #FFFFFF;
+  --pm-input-border: #D1D5DB;
+  --pm-input-text: #1F2937;
+  --pm-input-placeholder: #9CA3AF;
+  --pm-input-focus-border: #9E8544;
+  --pm-input-focus-ring: rgba(158, 133, 68, 0.15);
+
+  /* Tables */
+  --pm-table-header-bg: #F9FAFB;
+  --pm-table-header-color: #8B7340;
+  --pm-table-row-hover: #F3F4F6;
+  --pm-table-row-selected: #EFF6FF;
+  --pm-table-border: #E5E7EB;
+
+  /* Modals */
+  --pm-modal-bg: #FFFFFF;
+  --pm-modal-overlay: rgba(0, 0, 0, 0.5);
+  --pm-modal-border: #E5E7EB;
+
+  /* Buttons */
+  --pm-btn-secondary-bg: #F3F4F6;
+  --pm-btn-secondary-color: #374151;
+  --pm-btn-secondary-border: #D1D5DB;
+  --pm-btn-secondary-hover-bg: #E5E7EB;
+  --pm-btn-danger-bg: #FEF2F2;
+  --pm-btn-danger-color: #EF4444;
+  --pm-btn-danger-hover-bg: #FEE2E2;
+
+  /* Badges / Tags */
+  --pm-badge-bg: #F3F4F6;
+  --pm-badge-color: #374151;
+  --pm-badge-border: #E5E7EB;
+
+  /* Dropdown / Popover */
+  --pm-dropdown-bg: #FFFFFF;
+  --pm-dropdown-border: #E5E7EB;
+  --pm-dropdown-shadow: 0 12px 40px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  --pm-dropdown-item-hover: #F3F4F6;
+
+  /* Profile menu */
+  --pm-profile-menu-bg: #FFFFFF;
+  --pm-profile-menu-shadow: 0 12px 40px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  --pm-profile-divider: #F3F4F6;
+
+  /* Tooltip */
+  --pm-tooltip-color: #FFFFFF;
+  --pm-tooltip-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  /* Avatar */
+  --pm-avatar-gradient: linear-gradient(135deg, #3B82F6, #6366F1);
+  --pm-avatar-border: #E5E7EB;
+  --pm-online-dot-border: #FAFAFA;
+
+  /* Scrollbar */
+  --pm-scrollbar-thumb: rgba(0, 0, 0, 0.08);
+
+  /* Donut chart segments */
+  --pm-donut-maintenance: #3B82F6;
+  --pm-donut-repair: #8B5CF6;
+  --pm-donut-taxes: #10B981;
+  --pm-donut-saving: #F59E0B;
+
+  /* Typography - Satoshi font */
+  --font-primary: 'Satoshi', 'Inter', system-ui, sans-serif;
+  --font-secondary: 'Satoshi', 'Inter', system-ui, sans-serif;
+
+  /* Font sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 0.9375rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+
+  /* Radius */
+  --radius-card: 16px;
+  --radius-content: 12px;
+  --radius-sidebar-pill: 12px;
+  --radius-full: 100px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Shadows */
+  --pm-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --pm-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --pm-shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ═══════════════════════════════════════════════
+   DARK MODE — Gold Accent Theme
+   ═══════════════════════════════════════════════ */
+.dark {
+  /* Page backgrounds - deep navy */
+  --pm-gradient-start: #0B1525;
+  --pm-gradient-mid: #0F1B2E;
+  --pm-gradient-end: #132238;
+  --pm-content-bg: #0F1B2E;
+  --pm-card-bg: #152035;
+  --pm-card-bg-hover: #1A2A44;
+
+  /* Text colors — strong hierarchy */
+  --pm-text-primary: #FFFFFF;
+  --pm-text-secondary: #C4A767;
+  --pm-text-muted: #8B9CB7;
+  --pm-text-grey: #64748B;
+  --pm-text-on-accent: #FFFFFF;
+
+  /* Accent colors — GOLD primary in dark mode */
+  --pm-accent-primary: #C4A767;
+  --pm-accent-primary-hover: #D4B977;
+  --pm-accent-primary-bg: rgba(196, 167, 103, 0.12);
+  --pm-accent-green: #34D399;
+  --pm-accent-green-bg: rgba(52, 211, 153, 0.15);
+  --pm-accent-red: #F87171;
+  --pm-accent-red-bg: rgba(248, 113, 113, 0.12);
+  --pm-accent-orange: #FBBF24;
+  --pm-accent-orange-bg: rgba(251, 191, 36, 0.12);
+  --pm-accent-purple: #A78BFA;
+  --pm-accent-purple-bg: rgba(167, 139, 250, 0.12);
+  --pm-accent-gold: #C4A767;
+  --pm-accent-gold-bg: rgba(196, 167, 103, 0.15);
+
+  /* Sidebar */
+  --pm-sidebar-bg: #0D1B30;
+  --pm-sidebar-bg-gradient: linear-gradient(180deg, #0D1B30 0%, #081424 100%);
+  --pm-sidebar-border: rgba(255, 255, 255, 0.06);
+  --pm-sidebar-item-color: #94A3B8;
+  --pm-sidebar-item-hover-bg: rgba(0, 201, 167, 0.10);
+  --pm-sidebar-item-hover-color: #E2E8F0;
+  --pm-sidebar-item-active-bg: linear-gradient(135deg, rgba(0, 201, 167, 0.25), rgba(59, 130, 246, 0.14));
+  --pm-sidebar-item-active-color: #FFFFFF;
+  --pm-sidebar-item-active-shadow: 0 0 16px rgba(0, 201, 167, 0.22), 0 0 0 1px rgba(0, 201, 167, 0.15);
+  --pm-sidebar-item-active-border: #00C9A7;
+  --pm-sidebar-item-active-icon-filter: brightness(0) invert(1);
+  --pm-sidebar-icon-filter: brightness(0) invert(1);
+  --pm-sidebar-icon-opacity: 0.5;
+  --pm-sidebar-icon-active-opacity: 1;
+
+  /* Chart */
+  --pm-bar-light: #1E3050;
+  --pm-bar-active: #C4A767;
+  --pm-tooltip-bg: #152035;
+
+  /* Trend badges */
+  --pm-trend-green-bg: rgba(52, 211, 153, 0.15);
+  --pm-trend-red-bg: rgba(248, 113, 113, 0.12);
+
+  /* Borders */
+  --pm-border: #1E3050;
+  --pm-border-light: #1A2A44;
+  --pm-border-heavy: #2A3F5F;
+
+  /* Inputs / Forms */
+  --pm-input-bg: #152035;
+  --pm-input-border: #1E3050;
+  --pm-input-text: #F1F5F9;
+  --pm-input-placeholder: #64748B;
+  --pm-input-focus-border: #C4A767;
+  --pm-input-focus-ring: rgba(196, 167, 103, 0.2);
+
+  /* Tables */
+  --pm-table-header-bg: #1A2A44;
+  --pm-table-header-color: #C4A767;
+  --pm-table-row-hover: #1A2A44;
+  --pm-table-row-selected: rgba(196, 167, 103, 0.08);
+  --pm-table-border: #1E3050;
+
+  /* Modals */
+  --pm-modal-bg: #152035;
+  --pm-modal-overlay: rgba(0, 0, 0, 0.7);
+  --pm-modal-border: #1E3050;
+
+  /* Buttons */
+  --pm-btn-secondary-bg: #1E293B;
+  --pm-btn-secondary-color: #CBD5E1;
+  --pm-btn-secondary-border: #334155;
+  --pm-btn-secondary-hover-bg: #334155;
+  --pm-btn-danger-bg: rgba(248, 113, 113, 0.1);
+  --pm-btn-danger-color: #F87171;
+  --pm-btn-danger-hover-bg: rgba(248, 113, 113, 0.2);
+
+  /* Badges / Tags */
+  --pm-badge-bg: #1E293B;
+  --pm-badge-color: #CBD5E1;
+  --pm-badge-border: #334155;
+
+  /* Dropdown / Popover */
+  --pm-dropdown-bg: #1E293B;
+  --pm-dropdown-border: #334155;
+  --pm-dropdown-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  --pm-dropdown-item-hover: #334155;
+
+  /* Profile menu */
+  --pm-profile-menu-bg: #1E293B;
+  --pm-profile-menu-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  --pm-profile-divider: #334155;
+
+  /* Tooltip */
+  --pm-tooltip-color: #FFFFFF;
+  --pm-tooltip-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+  /* Avatar */
+  --pm-avatar-gradient: linear-gradient(135deg, #C4A767, #8B7340);
+  --pm-avatar-border: #1E293B;
+  --pm-online-dot-border: #0B1525;
+
+  /* Scrollbar */
+  --pm-scrollbar-thumb: rgba(255, 255, 255, 0.06);
+
+  /* Donut chart */
+  --pm-donut-maintenance: #C4A767;
+  --pm-donut-repair: #A78BFA;
+  --pm-donut-taxes: #34D399;
+  --pm-donut-saving: #FBBF24;
+
+  /* Shadows */
+  --pm-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --pm-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --pm-shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,435 @@
+/* ── Login Page — PentEdge CRM Style ── */
+.loginPage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #EEF1F5;
+  font-family: var(--font-primary, 'Satoshi', 'Inter', system-ui, sans-serif);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Gradient Blob Background ── */
+.blobWrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(139, 131, 227, 0.25) 0%,
+    rgba(108, 145, 230, 0.18) 30%,
+    rgba(130, 170, 240, 0.10) 55%,
+    transparent 75%
+  );
+  filter: blur(40px);
+  animation: blobPulse 8s ease-in-out infinite;
+}
+
+@keyframes blobPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  50% { transform: translate(-50%, -50%) scale(1.08); opacity: 0.85; }
+}
+
+/* ── Top Header Bar ── */
+.topBar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 40px;
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoText {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1F2937;
+  letter-spacing: -0.3px;
+}
+
+.logoAccent {
+  color: #9E8544;
+}
+
+/* ── Main Content ── */
+.contentArea {
+  position: relative;
+  z-index: 10;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+/* ── Floating Icon Bubbles ── */
+.floatingIcons {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.iconBubble {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.iconBubble.visible {
+  opacity: 1;
+}
+
+.iconBubble svg {
+  width: 22px;
+  height: 22px;
+  color: #9CA3AF;
+}
+
+.bubble1 { top: 18%; left: 12%; animation: floatA 6s ease-in-out infinite; }
+.bubble2 { top: 12%; right: 15%; animation: floatB 7s ease-in-out infinite; }
+.bubble3 { bottom: 28%; left: 8%; animation: floatC 5.5s ease-in-out infinite; }
+.bubble4 { bottom: 22%; right: 10%; animation: floatA 6.5s ease-in-out infinite; }
+
+@keyframes floatA {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes floatB {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-8px) translateX(5px); }
+  66% { transform: translateY(4px) translateX(-3px); }
+}
+
+@keyframes floatC {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+/* ── Text Sections (animated) ── */
+.textBlock {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  max-width: 600px;
+  padding: 0 20px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleLogo {
+  margin-bottom: 16px;
+}
+
+/* Step 1: Title */
+.titleSection {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.titleSection.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mainTitle {
+  font-size: 44px;
+  font-weight: 700;
+  color: #1F2937;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+}
+
+.titleAccent {
+  color: #9E8544;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: #9CA3AF;
+  line-height: 1.5;
+}
+
+/* Step 2: Tagline */
+.taglineSection {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(0px);
+}
+
+.taglineSection.visible {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.tagline {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1F2937;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+}
+
+.tagline .highlight {
+  color: #DA291C;
+}
+
+/* Step 3: Login form */
+.loginSection {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(0px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginSection.visible {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.loginBrandRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.loginBrand {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1F2937;
+  letter-spacing: -0.3px;
+}
+
+.loginHeading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1F2937;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+  margin-bottom: 8px;
+}
+
+.loginSubtext {
+  font-size: 15px;
+  color: #9E8544;
+  margin-bottom: 28px;
+}
+
+/* ── Form ── */
+.form {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6B7280;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #E5E7EB;
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: var(--font-primary, 'Satoshi', 'Inter', system-ui, sans-serif);
+  color: #1F2937;
+  background: #FFFFFF;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #9E8544;
+  box-shadow: 0 0 0 3px rgba(158, 133, 68, 0.12);
+}
+
+.input::placeholder {
+  color: #D1D5DB;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 14px;
+  background: #9E8544;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-primary, 'Satoshi', 'Inter', system-ui, sans-serif);
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+  margin-top: 4px;
+}
+
+.submitBtn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.submitBtn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.submitBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Error ── */
+.errorText {
+  color: #EF4444;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 16px;
+  background: rgba(239, 68, 68, 0.06);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  border-radius: 10px;
+}
+
+/* ── Hint ── */
+.hint {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: rgba(158, 133, 68, 0.06);
+  border: 1px solid rgba(158, 133, 68, 0.15);
+  border-radius: 12px;
+  font-size: 13px;
+  color: #6B7280;
+  text-align: left;
+  width: 100%;
+  max-width: 380px;
+  box-sizing: border-box;
+}
+
+.hintTitle {
+  font-weight: 700;
+  color: #9E8544;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  margin: 0 0 6px;
+}
+
+.hintRow {
+  margin: 2px 0;
+}
+
+.hintRow code {
+  padding: 2px 6px;
+  background: rgba(158, 133, 68, 0.10);
+  border-radius: 4px;
+  font-size: 12px;
+  color: #1F2937;
+  font-weight: 600;
+}
+
+/* ── Footer ── */
+.footer {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px 40px;
+  font-size: 13px;
+  color: #9CA3AF;
+}
+
+.footerLink {
+  color: #8B7340;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.footerLink:hover {
+  color: #1F2937;
+}
+
+.footerDot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #D1D5DB;
+}
+
+/* ── Step transitions ── */
+.fadeOut {
+  opacity: 0 !important;
+  transform: translateY(-60%) !important;
+  pointer-events: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .topBar { padding: 16px 20px; }
+  .mainTitle { font-size: 32px; }
+  .tagline { font-size: 26px; }
+  .loginHeading { font-size: 24px; }
+  .form { max-width: 100%; padding: 0 16px; }
+  .hint { max-width: 100%; }
+  .footer { flex-wrap: wrap; gap: 12px; padding: 16px 20px; }
+  .bubble1, .bubble2, .bubble3, .bubble4 { display: none; }
+}

@@ -1,0 +1,101 @@
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import "./variables.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(
+    to bottom right,
+    var(--pm-gradient-start),
+    var(--pm-gradient-mid),
+    var(--pm-gradient-end)
+  );
+  color: var(--pm-text-primary);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ═══════════════════════════════════
+   DARK MODE OVERRIDES
+   ═══════════════════════════════════ */
+.dark body,
+body.dark {
+  background: linear-gradient(
+    to bottom right,
+    #0B1525,
+    #0F1B2E,
+    #0B1525
+  );
+  color: #F1F5F9;
+}
+
+/* Scrollbar (dark) */
+.dark ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0F1B2E;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #1E3050;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #2A4066;
+}
+.dark {
+  scrollbar-color: #1E3050 #0F1B2E;
+}
+
+/* Selection (dark) — gold tint */
+.dark ::selection {
+  background: rgba(196, 167, 103, 0.3);
+  color: #F1F5F9;
+}
+.dark ::-moz-selection {
+  background: rgba(196, 167, 103, 0.3);
+  color: #F1F5F9;
+}

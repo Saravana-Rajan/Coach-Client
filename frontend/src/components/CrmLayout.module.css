@@ -1,0 +1,81 @@
+/* ══════════════════════════════════════════════════
+   CrmLayout — Viewport wrapper + flex shell
+   Matches PentEdge-CRM layout pattern exactly
+   ══════════════════════════════════════════════════ */
+
+.pageWrapper {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+.layout {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  height: 100%;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+  padding: 14px 20px;
+  height: 100%;
+  overflow: hidden;
+  background: var(--pm-content-bg);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--pm-border);
+}
+
+.contentNoPad {
+  padding: 0;
+  gap: 0;
+}
+
+/* ── Hamburger button (mobile only) ── */
+
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1001;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--pm-card-bg);
+  border: 1px solid var(--pm-border);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--pm-shadow-sm);
+}
+
+.hamburger svg {
+  width: 20px;
+  height: 20px;
+  color: var(--pm-text-primary);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .layout {
+    padding: 8px;
+    gap: 0;
+  }
+
+  .content {
+    padding: 10px 12px;
+    padding-top: 52px;
+    border-radius: var(--radius-lg);
+    width: 100%;
+  }
+}

@@ -1,0 +1,101 @@
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  animation: slideDown 0.3s ease-out;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 12px;
+}
+
+.bannerOutOfSync {
+  background: linear-gradient(135deg, #ff3c00, #ff6b35);
+  color: #fff;
+}
+
+.bannerSuccess {
+  background: linear-gradient(135deg, #166534, #22c55e);
+  color: #fff;
+}
+
+.bannerSyncing {
+  background: linear-gradient(135deg, #9E8544, #C4A767);
+  color: #fff;
+}
+
+.bannerSchema {
+  background: linear-gradient(135deg, #7C3AED, #A78BFA);
+  color: #fff;
+}
+
+.messageWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.warningIcon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.syncBtn {
+  background: #fff;
+  color: #ff3c00;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+  white-space: nowrap;
+}
+
+.syncBtn:hover {
+  opacity: 0.85;
+}
+
+.syncBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.dismissBtn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: background 0.15s ease;
+}
+
+.dismissBtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}

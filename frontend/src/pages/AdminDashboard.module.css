@@ -1,0 +1,258 @@
+/* * Admin Dashboard page styles * Follows PentEdge-CRM page layout (pages.module.css) + table (tables.module.css) patterns * All colors via --pm-* design tokens */
+
+/* ── Page Wrapper ── */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  padding: 24px;
+}
+
+.pageTitle {
+  font-family: var(--font-primary, 'Inter', sans-serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--pm-text-primary);
+  margin: 0 0 20px 0;
+}
+
+/* ── Stat Cards Row ── */
+.statsRow {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+/* ── Toolbar (Sync Controls) ── */
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
+.toolbarLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toolbarRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sectionTitle {
+  font-family: var(--font-primary, 'Inter', sans-serif);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--pm-text-primary);
+  margin: 0;
+}
+
+/* ── Primary Button (matches PentEdge .createBtn) ── */
+.syncBtn {
+  padding: 9px 20px;
+  border-radius: var(--radius-lg, 10px);
+  background: var(--pm-accent-primary);
+  color: var(--pm-text-on-accent);
+  font-family: var(--font-primary, 'Inter', sans-serif);
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  border: none;
+  transition: background 0.15s ease;
+}
+
+.syncBtn:hover:not(:disabled) {
+  background: var(--pm-accent-primary-hover);
+}
+
+.syncBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Status Message ── */
+.statusMessage {
+  font-family: var(--font-primary, 'Inter', sans-serif);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: var(--radius-md, 8px);
+}
+
+.statusSuccess {
+  background: var(--pm-accent-green-bg);
+  color: var(--pm-accent-green);
+}
+
+.statusError {
+  background: var(--pm-accent-red-bg);
+  color: var(--pm-accent-red);
+}
+
+/* ── Table Wrapper (matches PentEdge .tableWrap) ── */
+.tableWrap {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  background: var(--pm-card-bg);
+  border-radius: var(--radius-xl, 12px);
+  border: 1px solid var(--pm-border);
+  margin-top: 6px;
+}
+
+.table {
+  min-width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+/* ── Header Cells (matches PentEdge .th) ── */
+.th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--pm-table-header-bg);
+  padding: 10px 12px;
+  text-align: left;
+  font-family: var(--font-primary, 'Inter', sans-serif);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--pm-table-header-color);
+  white-space: nowrap;
+  user-select: none;
+  border-bottom: 1px solid var(--pm-table-border);
+  min-width: 120px;
+}
+
+/* ── Rows (matches PentEdge .tr) ── */
+.tr {
+  border-bottom: 1px solid var(--pm-table-border);
+  transition: background 0.15s ease;
+}
+
+.tr:last-child {
+  border-bottom: none;
+}
+
+.tr:hover {
+  background: var(--pm-table-row-hover);
+}
+
+/* ── Data Cells (matches PentEdge .td) ── */
+.td {
+  padding: 8px 12px;
+  font-family: var(--font-primary, 'Inter', sans-serif);
+  font-size: 13px;
+  color: var(--pm-text-primary);
+  white-space: nowrap;
+  min-width: 120px;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Status Badges (matches PentEdge .badge pattern) ── */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-full, 999px);
+  font-family: var(--font-primary, 'Inter', sans-serif);
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.badgeCompleted {
+  background: var(--pm-accent-green-bg);
+  color: var(--pm-accent-green);
+}
+
+.badgeFailed {
+  background: var(--pm-accent-red-bg);
+  color: var(--pm-accent-red);
+}
+
+.badgeInProgress {
+  background: var(--pm-accent-orange-bg);
+  color: var(--pm-accent-orange);
+}
+
+/* ── Empty State (matches PentEdge .empty) ── */
+.empty {
+  text-align: center;
+  padding: 60px 14px;
+  font-family: var(--font-primary, 'Inter', sans-serif);
+  font-size: 14px;
+  color: var(--pm-text-muted);
+}
+
+/* ── Loading Spinner (matches PentEdge pattern) ── */
+@keyframes spinOuter {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 16px;
+  flex: 1;
+}
+
+.spinnerOuter {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px solid var(--pm-border-light);
+  border-top-color: var(--pm-accent-primary);
+  animation: spinOuter 0.8s linear infinite;
+}
+
+.loadingText {
+  font-family: var(--font-primary, 'Inter', sans-serif);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--pm-text-muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 16px;
+  }
+
+  .statsRow {
+    flex-direction: column;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .toolbarRight {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .syncBtn {
+    width: 100%;
+    text-align: center;
+  }
+}

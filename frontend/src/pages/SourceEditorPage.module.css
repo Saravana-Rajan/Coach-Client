@@ -1,0 +1,241 @@
+/* * Source Editor Page styles * Mirrors PentEdge CRM patterns: tabs from pages.module.css, * table from tables.module.css, inputs from forms.module.css */
+
+/* ── Page wrapper ── */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+}
+
+/* ── Header ── */
+.header {
+  flex-shrink: 0;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--pm-text-primary);
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+
+.description {
+  font-family: var(--font-primary);
+  font-size: 13px;
+  color: var(--pm-text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.descriptionHighlight {
+  color: var(--pm-accent-primary);
+  font-weight: 500;
+}
+
+/* ── Tabs (matches PentEdge pages.module.css .tabs/.tab/.tabActive) ── */
+.tabs {
+  margin-bottom: 8px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: var(--pm-card-bg);
+  border-radius: var(--radius-lg);
+  padding: 3px;
+  border: 1px solid var(--pm-border);
+  width: fit-content;
+}
+
+.tab {
+  padding: 7px 22px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--pm-text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.tab:hover {
+  color: var(--pm-text-primary);
+}
+
+.tabActive {
+  background: #9E8544;
+  color: var(--pm-text-on-accent);
+}
+
+.tabActive:hover {
+  color: var(--pm-text-on-accent);
+}
+
+/* ── Table wrapper (matches PentEdge tables.module.css) ── */
+.tableWrap {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  background: var(--pm-card-bg);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--pm-border);
+  margin-top: 6px;
+}
+
+.table {
+  min-width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+/* ── Header cells (sticky, matches tables.module.css .th) ── */
+.th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--pm-table-header-bg);
+  padding: 10px 12px;
+  text-align: left;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--pm-table-header-color);
+  white-space: nowrap;
+  user-select: none;
+  border-bottom: 1px solid var(--pm-table-border);
+  min-width: 120px;
+}
+
+/* ── Rows (matches tables.module.css .tr) ── */
+.tr {
+  border-bottom: 1px solid var(--pm-table-border);
+  transition: background 0.15s ease;
+}
+
+.tr:last-child {
+  border-bottom: none;
+}
+
+.tr:hover {
+  background: var(--pm-table-row-hover);
+}
+
+/* ── Data cells (matches tables.module.css .td) ── */
+.td {
+  padding: 8px 12px;
+  font-family: var(--font-primary);
+  font-size: 13px;
+  color: var(--pm-text-primary);
+  white-space: nowrap;
+  min-width: 120px;
+}
+
+/* ── Inline editable input (matches forms.module.css .input) ── */
+.inlineInput {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid var(--pm-input-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-primary);
+  font-size: 13px;
+  color: var(--pm-input-text);
+  background: var(--pm-input-bg);
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inlineInput:focus {
+  border-color: var(--pm-input-focus-border);
+  box-shadow: 0 0 0 3px var(--pm-input-focus-ring);
+}
+
+.inlineInput::placeholder {
+  color: var(--pm-input-placeholder);
+}
+
+/* ── Inline select dropdown (matches forms.module.css .select + filterSelect pattern) ── */
+.inlineSelect {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid var(--pm-input-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-primary);
+  font-size: 13px;
+  color: var(--pm-input-text);
+  background: var(--pm-input-bg);
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9l6 6 6-6' stroke='%239CA3AF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 26px;
+}
+
+.inlineSelect:focus {
+  border-color: var(--pm-input-focus-border);
+  box-shadow: 0 0 0 3px var(--pm-input-focus-ring);
+}
+
+/* ── Checkbox (styled to match PentEdge accent) ── */
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--pm-accent-primary);
+  cursor: pointer;
+}
+
+/* ── Empty state ── */
+.empty {
+  text-align: center;
+  padding: 60px 14px;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  color: var(--pm-text-muted);
+}
+
+/* ── Status indicator for save feedback ── */
+.saveStatus {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 12px;
+  transition: opacity 0.3s ease;
+}
+
+.saveStatusSuccess {
+  color: var(--pm-accent-green);
+}
+
+.saveStatusError {
+  color: var(--pm-accent-red);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .tabs {
+    width: 100%;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+}

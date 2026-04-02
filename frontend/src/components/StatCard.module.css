@@ -1,0 +1,77 @@
+/* ═══════════════════════════════════
+   StatCard — PentEdge-style KPI card
+   ═══════════════════════════════════ */
+
+.card {
+  background: var(--pm-card-bg);
+  border-radius: var(--radius-card, 14px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: auto;
+  flex: 1;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.iconTitle {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconCircle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconCircle svg {
+  width: 22px;
+  height: 22px;
+}
+
+.title {
+  font-family: var(--font-primary, 'Inter', sans-serif);
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--pm-text-primary);
+  margin: 0;
+}
+
+.valueRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.value {
+  font-family: var(--font-primary, 'Inter', sans-serif);
+  font-weight: 500;
+  font-size: 27px;
+  color: var(--pm-text-primary);
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-family: var(--font-primary, 'Inter', sans-serif);
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--pm-text-muted);
+  margin: 0;
+  padding-bottom: 4px;
+}
