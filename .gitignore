@@ -16,6 +16,16 @@ frontend/.env
 .vscode/
 *.swp
 
+# Claude Code tooling
+.claude/
+CLAUDE-CODE-BEST-PRACTICES.txt
+Docs/superpowers/
+
+# DB artifacts
+backend/*.sqlite3-shm
+backend/*.sqlite3-wal
+backend/.sf_schema_cache.json
+
 # OS
 .DS_Store
 Thumbs.db
